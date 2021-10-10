@@ -24,7 +24,7 @@ Leader Board API
 
 #### Upon Click on User Name, Corresponding user's Score card will be displayed.
 
-![resources/screen2.png](resources/screen2.PNG)
+![resources/screen2.png](resources/screen2.png)
 
 #### Upon CLick On Each category, It will show the top 10 Users of Each category.
 
