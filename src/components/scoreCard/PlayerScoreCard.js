@@ -110,10 +110,13 @@ const PlayerScoreCard = (props) => {
     playerData &&
     (
       <div>
-        <Box sx={{m: 2}} maxHeight={'80%'}>
-          <Grid container rowSpacing={10} >
+        <Box sx={{m: 4}} minHeight={'100%'}>
+          <Grid container rowSpacing={10}>
 
-            <Grid item xs={8}>
+            <Grid item xs={2}>
+            </Grid>
+
+            <Grid item xs={8} style={{border: '2px solid #777777 !important'}}>
               <MuiThemeProvider theme={muiTableTheme}>
                 <MUIDataTable
                   title={name.toUpperCase()}

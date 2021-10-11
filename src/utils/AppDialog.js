@@ -4,7 +4,7 @@ import {
   Dialog, DialogTitle, DialogContent, makeStyles, Typography, Button, Divider,
 } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
-import Background from './images/DialogBackground.jpg';
+import Background from './images/BG2.jpg';
 
 const useStyles = makeStyles((theme) => ({
   dialogWrapper: {
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '1px 0px 0px 20px',
   },
   divider: {
-    background: '#777777',
+    background: '#F78B11',
   },
 
 }));

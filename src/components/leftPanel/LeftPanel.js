@@ -8,7 +8,6 @@ import {
 import {
   Search, Compare,
 } from '@material-ui/icons';
-import {isEmpty, isNil} from 'lodash';
 import NavItem from './NavItem';
 import overrallIcon from '../../utils/images/overrall.png';
 import atackIcon from '../../utils/images/attack.png';
@@ -24,7 +23,7 @@ const useStyles = makeStyles(() => ({
   },
   desktopDrawer: {
     width: 240,
-    top: 50,
+    top: 61,
     height: 'calc(100% - 64px)',
   },
   avatar: {
@@ -54,38 +53,39 @@ const LeftPanel = ({onMobileClose, openMobile}) => {
   const [targetUser, setTargetUser] = useState(null);
   const navigate = useNavigate();
   const formRef = React.useRef();
+  const formRefCopmpare = React.useRef();
 
   const classes = useStyles();
   const location = useLocation();
 
   const appMenu = [
     {
-      href: '/app/overall',
+      href: '/game-scoreboard-ui/overall',
       icon: overrallIcon,
       title: 'Overall',
     },
     {
-      href: '/app/attack',
+      href: '/game-scoreboard-ui/attack',
       icon: atackIcon,
       title: 'Attack',
     },
     {
-      href: '/app/defense',
+      href: '/game-scoreboard-ui/defense',
       icon: deffenceIcon,
       title: 'Defense',
     },
     {
-      href: '/app/magic',
+      href: '/game-scoreboard-ui/magic',
       icon: magicIcon,
       title: 'Magic',
     },
     {
-      href: '/app/cooking',
+      href: '/game-scoreboard-ui/cooking',
       icon: cookIcon,
       title: 'Cooking',
     },
     {
-      href: '/app/crafting',
+      href: '/game-scoreboard-ui/crafting',
       icon: craftIcon,
       title: 'Crafting',
     },
@@ -104,7 +104,7 @@ const LeftPanel = ({onMobileClose, openMobile}) => {
     evt.preventDefault();
     const name = searchText;
     setSearchText('');
-    navigate('/app/player', {state: {name}});
+    navigate('/game-scoreboard-ui/player', {state: {name}});
   };
 
   const handleCompare = (evt) => {
@@ -113,7 +113,8 @@ const LeftPanel = ({onMobileClose, openMobile}) => {
     const targetUserName = targetUser;
     setSourceUser('');
     setTargetUser('');
-    navigate('/app/compareplayers', {state: {sourceUserName, targetUserName}});
+    navigate('/game-scoreboard-ui/compareplayers',
+        {state: {sourceUserName, targetUserName}});
   };
 
 
@@ -143,40 +144,44 @@ const LeftPanel = ({onMobileClose, openMobile}) => {
             <Typography
               align="left"
               color="textPrimary"
-              variant="h5"
+              variant="h4"
             >
-              Search
+              Search Player
             </Typography>
           </Grid>
-          <form ref={formRef} onSubmit={handleClick}>
-            <Grid item xs={11}>
-              <TextField
-                onChange={(e) => {
-                  setSearchText(e.target.value);
-                }}
-                value={searchText}
-                placeholder="Player Name"
-                variant="outlined"
-                required={true}
-                type="string"
-                inputProps={{
-                  style: {
-                    padding: 5,
-                  },
-                }}
-              />
-            </Grid>
-            <Grid item xs={11}>
-              <Button variant="contained"
-                color="primary"
-                endIcon={<Search/>}
-                type="submit"
-                size= 'small' onClick={() => formRef.current.reportValidity()}
-              >
+          <br></br>
+          <Grid item xs={12}>
+            <form ref={formRef} onSubmit={handleClick}>
+              <Grid item xs={11}>
+                <TextField
+                  onChange={(e) => {
+                    setSearchText(e.target.value);
+                  }}
+                  value={searchText}
+                  placeholder="Player Name"
+                  variant="outlined"
+                  required={true}
+                  type="string"
+                  inputProps={{
+                    style: {
+                      padding: 5,
+                    },
+                  }}
+                />
+              </Grid>
+              <br></br>
+              <Grid item xs={11}>
+                <Button variant="contained"
+                  color="primary"
+                  endIcon={<Search/>}
+                  type="submit"
+                  size= 'small' onClick={() => formRef.current.reportValidity()}
+                >
               Search
-              </Button>
-            </Grid>
-          </form>
+                </Button>
+              </Grid>
+            </form>
+          </Grid>
         </Grid>
       </Box>
 
@@ -189,12 +194,14 @@ const LeftPanel = ({onMobileClose, openMobile}) => {
             <Typography
               align="left"
               color="textPrimary"
-              variant="h5"
+              variant="h4"
             >
               Compare Players
             </Typography>
           </Grid>
-          <form ref={formRef} onSubmit={handleCompare}>
+          <br></br>
+
+          <form ref={formRefCopmpare} onSubmit={handleCompare}>
             <Grid item xs={11}>
               <TextField
                 onChange={(e) => {
@@ -212,6 +219,7 @@ const LeftPanel = ({onMobileClose, openMobile}) => {
                 }}
               />
             </Grid>
+            <br></br>
             <Grid item xs={11}>
               <TextField
                 onChange={(e) => {
@@ -229,11 +237,13 @@ const LeftPanel = ({onMobileClose, openMobile}) => {
                 }}
               />
             </Grid>
+            <br></br>
             <Grid item xs={11}>
               <Button variant="contained"
                 color="primary"
                 endIcon={<Compare/>}
-                type="submit" onClick={() => formRef.current.reportValidity()}
+                type="submit"
+                onClick={() => formRefCopmpare.current.reportValidity()}
               >Compare</Button>
             </Grid>
           </form>

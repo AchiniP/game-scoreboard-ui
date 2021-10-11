@@ -8,15 +8,16 @@ import {
   Hidden,
   IconButton,
   Toolbar,
-  makeStyles,
+  makeStyles, Grid,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
+import logo from '../../utils/images/logo.jpeg';
 
 const useStyles = makeStyles(() => ({
   root: {},
   avatar: {
     width: 60,
-    height: 60,
+    height: 65,
   },
 }));
 
@@ -35,7 +36,10 @@ const Header = ({
     >
       <Toolbar variant="dense" >
         <RouterLink to="/">
-          {/* <Logo /> */}
+          <Grid item xs={4} >
+            <img src={logo} alt='' style={{height: '55px', width: '100px'}}>
+            </img>
+          </Grid>
         </RouterLink>
         <Box flexGrow={1} />
         <Hidden lgUp>
