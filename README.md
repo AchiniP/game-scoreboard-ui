@@ -4,7 +4,7 @@ Leader Board API
 ### Project
 
 -This project is hosted in
-https://achinip.github.io/game-scoreboard-ui/overall
+https://achinip.github.io/game-scoreboard-ui/
 and backend is hosted in AWS EC2 VM https://ec2-3-96-171-8.ca-central-1.compute.amazonaws.com:8000/api-docs/
 
 ## Prerequisites
