@@ -4,8 +4,8 @@ Leader Board API
 ### Project
 
 -This project is hosted in
-`https://achinip.github.io/game-scoreboard-ui/`
-- To connect to the backend API and fetch data, Please follow the guide in https://achinip.github.io/scoreboard-api/
+https://achinip.github.io/game-scoreboard-ui/overall
+and backend is hosted in AWS EC2 VM https://ec2-3-96-171-8.ca-central-1.compute.amazonaws.com:8000/api-docs/
 
 ## Prerequisites
 - Backend should Be up and Running in http://localhost:8000/v1/score to display data
