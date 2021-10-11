@@ -2,7 +2,8 @@
 Leader Board API
 
 ## Prerequisites
-- Backend SHould Be up and Running
+- Backend should Be up and Running in http://localhost:8000/v1/score to display data
+- Kindly refer https://achinip.github.io/scoreboard-api/ for backend set up instructions. (backend code - https://github.com/AchiniP/scoreboard-api)
 - If you need to change the backend url go to src/utils/AppGlobal.js and change scoreAPIRoute 
 
 
@@ -20,7 +21,7 @@ Leader Board API
 
 #### Upon Starting the app you will be redirected to Overall HighScore Page which includes top 10 users.
 
-![resources/screen1.png](resources/screen1.png)
+![resources/screen1.png](resources/screen1.PNG)
 
 #### Upon Click on User Name, Corresponding user's Score card will be displayed.
 
@@ -32,7 +33,7 @@ Leader Board API
 
 #### By Entering User's Name you can Search for Particular User's Score Card
 
-![resources/screen4.png](resources/screen4.png)
+![resources/screen4.png](resources/screen4.PNG)
 
 ![resources/screen5.png](resources/screen5.PNG)
 
@@ -42,13 +43,13 @@ Leader Board API
 
 #### Also you can compare two users 
 
-![img.png](resources/screen8.png)
+![img.png](resources/screen7.PNG)
 
-![img.png](resources/screen9.PNG)
+![img.png](resources/screen8.PNG)
 
 #### If you enter an invalid user name to compare, then only valid user's data will be displayed
 
-![img.png](resources/screen10.PNG)
+![img.png](resources/screen9.PNG)
 
 #### used libraries
 

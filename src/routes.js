@@ -16,14 +16,14 @@ import craftIcon from './utils/images/crafting.png';
 export const appRoutes = [
   {
     path: '/',
-    element: <Navigate to = "/app/overall" />,
+    element: <Navigate to = "/game-scoreboard-ui/overall" />,
   },
   {
     path: '/game-scoreboard-ui',
-    element: <Navigate to = "/app/overall" />,
+    element: <Navigate to = "/game-scoreboard-ui/overall" />,
   },
   {
-    path: 'app',
+    path: 'game-scoreboard-ui',
     element: <DashboardLayout />,
     children: [
       {path: 'overall', element: <ScoreCard category={'overall'}
@@ -47,8 +47,11 @@ export const appRoutes = [
   {
     path: '/',
     children: [
-      {path: '/app/overall', element: <ScoreCard category={'overall'}/>},
-      {path: '/*', element: <Navigate to="/app/404" />},
+      {
+        path: '/game-scoreboard-ui/overall',
+        element: <ScoreCard category={'overall'}/>,
+      },
+      {path: '/*', element: <Navigate to="/game-scoreboard-ui/404" />},
     ],
   },
 ];

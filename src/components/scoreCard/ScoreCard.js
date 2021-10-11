@@ -73,6 +73,11 @@ const ScoreCard = (props) => {
           color: '#F78B11',
         },
       },
+      MUIDataTable: {
+        responsiveScroll: {
+          maxHeight: '800px !important',
+        },
+      },
 
     },
   });
