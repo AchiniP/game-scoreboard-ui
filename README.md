@@ -4,11 +4,8 @@ Leader Board API
 ### Project
 
 -This project is hosted in
-https://achinip.github.io/game-scoreboard-ui
-<br/>
-frontend is hosted in git-pages and backend is deployed in AWS
-
-## To Set up Locally
+`https://achinip.github.io/game-scoreboard-ui/`
+- To connect to the backend API and fetch data, Please follow the guide in https://achinip.github.io/scoreboard-api/
 
 ## Prerequisites
 - Backend should Be up and Running in http://localhost:8000/v1/score to display data
@@ -34,7 +31,7 @@ frontend is hosted in git-pages and backend is deployed in AWS
 
 #### Upon Click on User Name, Corresponding user's Score card will be displayed.
 
-![resources/screen2.png](resources/screen2.png)
+![resources/screen2.png](resources/screen2.PNG)
 
 #### Upon CLick On Each category, It will show the top 10 Users of Each category.
 
